@@ -53,7 +53,7 @@ Pastikan Anda telah menginstal yang berikut ini:
     ```
 2.  **Masuk ke Direktori Proyek:**
     ```bash
-    cd [crud-auth]
+    cd crud-auth
     ```
 3.  **Instal Dependensi Backend:**
     Masuk ke folder crud-auth/back-end.
@@ -83,17 +83,25 @@ Pastikan Anda telah menginstal yang berikut ini:
 
 Berikut adalah struktur direktori back-end dari proyek ini:
 
--   `.`
+-   `back-end`
     -   `config/` &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-        -   `db.js` &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; # Konfigurasi koneksi database
-    -   `node_modules/` &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; # Folder berisi dependensi Node.js
-    -   `public/` &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; # File-file front-end (HTML, CSS, JS)
+        -   `db.js` &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; # Konfigurasi koneksi database
+    -   `controllers/` &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+        -   `userController.js` &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;    # Logika bisnis untuk operasi CRUD pengguna
+    -   `middlewar/` &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+        -   `authMiddleware.js` &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;    # Middleware untuk autentikasi
+        -   `uploadMiddleware.js` &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; # Middleware untuk upload file (Multer)
+    -   `models/` &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+        -   `userModel.js` &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; # Definisi skema data pengguna
+    -   `public/` &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; # Folder untuk file-file front-end yang disajikan secara statis
         -   `uploads/` &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; # Folder untuk menyimpan foto yang diunggah
-    -   `models/` &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; # Definisi skema database (jika ada)
-    -   `routes/` &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; # Definisi rute API (jika ada)
-    -   `app.js` # File utama server (misal: `server.js` atau `app.js`)
-    -   `package.json` &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; # Daftar dependensi dan script proyek
-    -   `README.md` &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; # File README ini
+            -  `nama_file_foto.jpg` &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; # Contoh file foto yang diunggah
+    -   `routes/` &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+        -   `userRoutes.js` &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; # Definisi rute API untuk pengguna
+    -   `gitignore` &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; # File untuk mengabaikan file/folder tertentu dari Git
+    -   `app.js` &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; # File utama aplikasi / entry point server (`app.js`)
+    -   `package.json` &nbsp; &nbsp; &nbsp; &nbsp; # Daftar dependensi dan script proyek
+    -   `README.md` &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; # File README ini
 
 ---
 
